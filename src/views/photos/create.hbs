@@ -1,20 +1,32 @@
-<main class="create">
-    <!-- Create Page (Only for logged-in users) -->
-    <section id="create">
-        <div class="form">
-            <h2>Add item</h2>
-            <form class="create-form" method="POST" action="#">
-                <input type="text" name="name" id="name" placeholder="Name" />
-                <input type="text" name="age" id="years" placeholder="Years" />
-                <input type="text" name="kind" id="kind" placeholder="Kind" />
-                <input type="text" name="image" id="animal-img" placeholder="Image url" />
-                <input type="text" name="needsOf" id="needs-of" placeholder="Needs of" />
-                <input type="text" name="location" id="location" placeholder="Location" />
-                <textarea id="description" placeholder="Description..." name="description"></textarea>
+<main>
 
-                <button type="submit">Post</button>
+    <section id="create-container">
+        <div class="create-container-info">
+            <!-- Do not forget to change the path to the image -->
+            <img src="/img/blog-img12.jpg" alt="image">
+
+            <form action="#" method="POST" class="container-text">
+
+                <h2>Create Publication</h2>
+                <p>Add your own masterpiece!</p>
+
+                <label for="title">Title:</label>
+                <input type="text" id="title" placeholder="Spring in the garden" name="name" value="">
+
+                <label for="painting-tech">Painting technique:</label>
+                <input type="text" id="painting-tech" placeholder="Oil paints" name="" value="">
+
+                <label for="picture">Art picture:</label>
+                <input type="text" id="picture" placeholder="http://..." name="image" value="">
+
+                <label for="certificate">Certificate of authenticity:</label>
+                <input type="text" id="certificate" placeholder="Yes" name="" value="">
+
+                <button class="create-btn">Create</button>
+
             </form>
+
         </div>
     </section>
+
 </main>
-</div>
