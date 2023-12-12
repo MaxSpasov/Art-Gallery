@@ -4,17 +4,17 @@ const jwt = require('../lib/jwt');
 const User = require('../models/User');
 const { SECRET } = require('../config/config');
 
-exports.login = async (email, password) => {
+exports.login = async (username, password) => {
 
-    const user = await User.findOne({ email });
+    const user = await User.findOne({ username });
 
     if (!user) {
-        throw new Error('Invalid email or password');
+        throw new Error('Invalid username or password');
     }
 
     const isValid = await bcrypt.compare(password, user.password);
     if (!isValid) {
-        throw new Error('Invalid email or password');
+        throw new Error('Invalid username or password');
     };
 
     const token = await generateToken(user);
@@ -23,9 +23,9 @@ exports.login = async (email, password) => {
 };
 
 exports.register = async (userData) => {
-    const user = await User.findOne({ email: userData.email });
+    const user = await User.findOne({ username: userData.username });
     if (user) {
-        throw new Error('Email already exists');
+        throw new Error('Username already exists');
     }
 
     const createdUser = await User.create(userData);
@@ -38,6 +38,7 @@ exports.register = async (userData) => {
 async function generateToken(user) {
     const payload = {
         _id: user._id,
+        username: user.username,
         email: user.email,
     };
 
