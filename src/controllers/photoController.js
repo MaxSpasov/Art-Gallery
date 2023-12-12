@@ -9,9 +9,6 @@ router.get('/', async (req, res) => {
 
     res.render('photos', { photos });
 });
-router.get('/search', (req, res) => {
-    res.render('search');
-});
 router.get('/create', isAuth, (req, res) => {
     res.render('photos/create');
 });
