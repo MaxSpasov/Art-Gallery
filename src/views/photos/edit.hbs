@@ -1,21 +1,28 @@
-<main class="edit">
-    <!-- Edit Page (Only for logged-in users) -->
-    <section id="create">
-        <div class="form">
-            <h2>Edit item</h2>
-            <form class="create-form" method="POST">
-                <input type="text" name="name" id="name" placeholder="Name" value="{{photo.name}}" />
-                <input type="text" name="age" id="years" placeholder="Years" value="{{photo.age}}" />
-                <input type="text" name="kind" id="kind" placeholder="Kind" value="{{photo.kind}}" />
-                <input type="text" name="image" id="animal-img" placeholder="Image url" value="{{photo.image}}" />
-                <input type="text" name="needsOf" id="needs-of" placeholder="Needs of" value="{{photo.needsOf}}" />
-                <input type="text" name="location" id="location" placeholder="Location" value="{{photo.location}}" />
-                <textarea id="description" placeholder="Description..."
-                    name="description">{{photo.description}}</textarea>
+<main>
+    <section id="edit-container">
+        <div class="edit-container-info">
+            <!-- Do not forget to change the path to the image -->
+            <img src="/img/blog-img12.jpg" alt="image">
 
-                <button type="submit">Edit</button>
+            <form action="#" method="" class="container-text">
+                <h2>Edit</h2>
+                <p>Edit your masterpiece!</p>
+
+                <label for="title">Title:</label>
+                <input type="text" id="title" name="" value="">
+
+                <label for="painting-tech">Painting technique:</label>
+                <input type="text" id="painting-tech" name="" value="">
+
+                <label for="picture">Art picture:</label>
+                <input type="text" id="picture" name="" value="">
+
+                <label for="certificate">Certificate of authenticity:</label>
+                <input type="text" id="certificate" name="" value="">
+
+                <button class="edit-btn">Edit</button>
             </form>
+
         </div>
     </section>
 </main>
-</div>
